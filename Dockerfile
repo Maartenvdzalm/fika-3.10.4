@@ -7,9 +7,9 @@
 
 FROM ubuntu:latest AS builder
 ARG FIKA=HEAD^
-ARG FIKA_TAG=v2.2.8
+ARG FIKA_TAG=v2.3.6
 ARG SPT=HEAD^
-ARG SPT_TAG=3.9.8
+ARG SPT_TAG=3.10.4
 ARG NODE=20.11.1
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
@@ -64,7 +64,7 @@ EXPOSE 6969
 #EXPOSE 6971
 
 # Add Docker labels
-LABEL maintainer="apfaffman" project="apfaffman/fika-3.9.8" version="1.01" description="Dockerized SPT backend with Fika mod installed."
+LABEL maintainer="Maartenvdzalm" project="Maartenvdzalm/fika-3.10.4" version="1.0" description="Dockerized SPT backend with Fika mod installed. Forked to update"
 
 # Specify the default command to run when the container starts
 CMD bash ./fcpy.sh
